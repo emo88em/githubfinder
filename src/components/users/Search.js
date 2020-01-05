@@ -16,16 +16,23 @@ class Search extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit} className='form'>
-        <input
-          type='text'
-          name='text'
-          placeholder='Search Users...'
-          value={this.state.text}
-          onChange={this.onChange}
-        />
-        <button className='btn btn-dark btn-block'>Enter</button>
-      </form>
+      <div>
+        <form onSubmit={this.onSubmit} className='form'>
+          <input
+            type='text'
+            name='text'
+            placeholder='Search Users...'
+            value={this.state.text}
+            onChange={this.onChange}
+          />
+          <button className='btn btn-dark btn-block'>Enter</button>
+        </form>
+        <button
+          className='btn btn-light btn-block'
+          onClick={this.props.clearUsers}>
+          Clear
+        </button>
+      </div>
     );
   }
 }
